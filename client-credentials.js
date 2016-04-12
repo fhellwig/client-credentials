@@ -74,8 +74,7 @@ class ClientCredentials {
     httpsPost(endpoint, body, callback) {
         let path = this.base + endpoint;
         let headers = {
-            'Content-Type': HttpsService.FORM_MEDIA_TYPE,
-            'Content-Length': Buffer.byteLength(form)
+            'Content-Type': HttpsService.FORM_MEDIA_TYPE
         };
         loginService.request('POST', path, headers, body, callback);
     }

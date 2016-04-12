@@ -1,6 +1,6 @@
 {
   "name": "client-credentials",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides the access token for Azure Active Directory (AAD) resources using client credentials.",
   "main": "client-credentials.js",
   "scripts": {
