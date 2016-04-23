@@ -1,6 +1,6 @@
 {
   "name": "client-credentials",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides the access token for Azure Active Directory (AAD) resources using client credentials.",
   "main": "client-credentials.js",
   "scripts": {
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/fhellwig/client-credentials#readme",
   "dependencies": {
-    "https-service": "^1.0.1"
+    "https-service": "^1.0.3"
   }
 }
