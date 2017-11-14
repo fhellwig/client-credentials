@@ -1,0 +1,13 @@
+Version 1.1.0 (2017-11-14)
+- Now using the request library for requesting the access token.
+- The getAccessToken() method returns a promise instead of using a callback.
+- Improved response error handling.
+
+Version 1.0.2 (2016-04-23)
+- Updated https-service dependency from 1.0.1 to 1.0.3.
+
+Version 1.0.1 (2016-04-23)
+- Fixed an error in the request headers.
+
+Version 1.0.0 (2016-04-23)
+- Initial commit.

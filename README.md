@@ -2,9 +2,9 @@
 
 Provides the access token for Azure Active Directory (AAD) resources using client credentials.
 
-Version 1.0.2
+Version 1.1.0
 
-Exports the `ClientCredentials` class that provides the `getAccessToken` method. The mechanism by which the access token is obtained is described by the [Service to Service Calls Using Client Credentials](https://msdn.microsoft.com/en-us/library/azure/dn645543.aspx) article.
+Exports the `ClientCredentials` class that provides the `getAccessToken` method. The mechanism by which the access token is obtained is described by the [Service to Service Calls Using Client Credentials](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-service-to-service) article.
 
 ## 1. Installation
 
@@ -19,12 +19,12 @@ const ClientCredentials = require('client-credentials');
 
 const credentials = new ClientCredentials('my-company.com', 'client-id', 'client-secret');
 
-credentials.getAccessToken('https://my-resource.com', token => {
-	console.log('Access Token', token);
+credentials.getAccessToken('https://my-resource.com').then(token => {
+  console.log('Access Token', token);
 })
 ```
 
-You can request access tokens for any number of resources. The tokens are cached so and refreshed automatically.
+You can request access tokens for any number of resources. The tokens are cached and refreshed automatically.
 
 ## 3. API
 
@@ -39,16 +39,16 @@ Creates a new `ClientCredentials` instance for the specified `tenant`. The `clie
 ### 3.2 getAccessToken
 
 ```javascript
-getAccessToken(resource, callback)
+getAccessToken(resource)
 ```
 
-Gets the access token for the specified resource. If no token exists in the token cache, it is requested from the Microsoft login service at `login.microsoftonline.com`. The callback signature is `callback(err, token)`.
+Gets the access token for the specified resource. If no token exists in the token cache, it is requested from the Microsoft login service at `login.microsoftonline.com`. This method returns a promise that is resolved with the access token.
 
 ## 4. License
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Frank Hellwig
+Copyright (c) 2017 Frank Hellwig
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

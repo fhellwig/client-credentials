@@ -1,6 +1,6 @@
 {
   "name": "client-credentials",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Provides the access token for Azure Active Directory (AAD) resources using client credentials.",
   "main": "client-credentials.js",
   "scripts": {
@@ -10,9 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/fhellwig/client-credentials.git"
   },
-  "keywords": [
-    "AAD"
-  ],
+  "keywords": ["AAD"],
   "author": "Frank Hellwig",
   "license": "MIT",
   "bugs": {
@@ -20,6 +18,6 @@
   },
   "homepage": "https://github.com/fhellwig/client-credentials#readme",
   "dependencies": {
-    "https-service": "^1.0.3"
+    "request": "^2.83.0"
   }
 }
