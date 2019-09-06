@@ -2,7 +2,7 @@
 
 Provides the access token for Azure Active Directory (AAD) resources using client credentials.
 
-Version 1.1.0
+Version 1.1.1
 
 Exports the `ClientCredentials` class that provides the `getAccessToken` method. The mechanism by which the access token is obtained is described by the [Service to Service Calls Using Client Credentials](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-service-to-service) article.
 
